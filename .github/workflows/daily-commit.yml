@@ -3,7 +3,7 @@ name: Daily Commit
 on:
   schedule:
     # Runs at 12:00 UTC every day (adjust the time as needed)
-    - cron: '33 17 * * *'
+    - cron: '52 17 * * *'
 
 jobs:
   commit:
@@ -16,7 +16,7 @@ jobs:
     - name: Add a commit to the repository
       run: |
         date > date.txt
-        git config --global user.name 'github-actions[bot]'
+        git config --global user.name '22f1001316@ds.study.iitm.ac.in'
         git config --global user.email '22f1001316@ds.study.iitm.ac.in'
         git add date.txt
         git commit -m 'Daily commit'
