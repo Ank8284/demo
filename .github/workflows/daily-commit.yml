@@ -3,7 +3,8 @@ name: Daily Commit
 on:
   schedule:
     # Runs at 12:00 UTC every day (adjust the time as needed)
-    - cron: '52 17 * * *'
+    - cron: '52 17 * * *'  # Runs daily at 23:22 IST
+
 
 jobs:
   commit:
@@ -11,9 +12,9 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
-    - name: Add a commit to the repository
+    - name: Daily update by 22f1001316@ds.study.iitm.ac.in
       run: |
         date > date.txt
         git config --global user.name '22f1001316@ds.study.iitm.ac.in'
